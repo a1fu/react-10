@@ -1,0 +1,80 @@
+.o-gasto{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 1rem;
+    grid-template-areas: '. gasto__titulo gasto__titulo gasto__titulo gasto__titulo gasto__titulo gasto__titulo .'
+                         '. gasto-cantidad gasto-cantidad gasto-cantidad gasto-cantidad gasto-cantidad gasto-cantidad .'
+                         '. gasto-semanal gasto-semanal gasto-semanal gasto-semanal gasto-semanal gasto-semanal .';
+
+    padding: 3rem 0;
+
+    &-semanal{
+        grid-area: gasto-semanal;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, auto);
+        grid-gap: 1rem;
+        grid-template-areas: 'block-1 block-2';
+
+        padding: 1rem;
+    }
+    &__titulo{
+        grid-area: gasto__titulo;
+        text-align: center;
+    }
+
+    &-semanal{
+        &-block-1{
+            grid-area: block-1;
+        }
+        &-block-2{
+            grid-area: block-2;
+        }
+    }
+
+    &-cantidad{
+        grid-area: gasto-cantidad;
+    }
+}
+
+.c-gasto{
+    &-formulario{
+        &__titulo{
+            text-align: center;
+            font-size: 20px;
+        }
+    }
+}
+
+.c-gasto{
+    &-listado{
+        &__titulo{
+            text-align: center;
+            font-size: 20px;
+        }
+    }
+}
+
+.c-gasto{
+    &-cantidad{
+        padding: 1rem;
+        &__titulo{
+            text-align: center;
+            font-size: 20px;
+        }
+    }
+}
+
+.c-gasto{
+    &-presupuesto{
+        
+    }
+}
+
+.u{
+    &-lh{
+        line-height: inherit;
+    }
+}
+
